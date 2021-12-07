@@ -23,4 +23,8 @@ t_train.head()
 
 print("\nt_test:\n")
 t_test.head()
-
+from sklearn.linear_model import LinearRegression
+mnb = LinearRegression()
+mnb.fit(t_train,t_train)
+mnb.predict(t_test)
+mnb.score(t_test,y_test)
